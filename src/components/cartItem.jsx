@@ -7,9 +7,13 @@ const Cartitem = () => {
     <div className="w-2/3 pr-10">
       <div className="w-full">
         <h2 className="font-titleFont text-2xl">Shopping Cart</h2>
-        <div>
-          <div></div>
-        </div>
+      </div>
+      <div>
+        {productData.map((item) => {
+          <div>
+            <div></div>
+          </div>;
+        })}
       </div>
     </div>
   );
