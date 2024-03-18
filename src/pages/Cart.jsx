@@ -4,11 +4,22 @@ import { useSelector } from "react-redux";
 const Cart = () => {
   const productData = useSelector((state) => state.luxehub.productData);
 
-  console.log("Product Data:", productData);
-
   return (
     <>
-      <div>Cart</div>
+      <div>
+        <img
+          className="w-full h-550 object-cover"
+          src="https://wallpapercave.com/wp/wp8678058.jpg"
+          alt="cartImg"
+        />
+        <div>
+          <CartItem />{" "}
+          <div className="w-1/3 bg-[#fafafa] py-6 px-4">
+            {" "}
+            <div className=" flex flex-col gap-6 border-b-[1px] border-b-gray-400 pb-6"></div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
