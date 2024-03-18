@@ -9,7 +9,7 @@ const Cart = () => {
     <>
       <div>
         <img
-          className="w-full h-550 object-cover"
+          className="w-full h-55 object-cover"
           src="https://wallpapercave.com/wp/wp8678058.jpg"
           alt="cartImg"
         />
