@@ -1,14 +1,15 @@
 import React from "react";
-import { render } from "react-dom"; // Changed from createRoot to render
+import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { store } from "./reduxSlice/Store.jsx";
 import "./index.css";
 import App from "./App.jsx";
 import "react-toastify/dist/ReactToastify.css";
 
-render(
+const root = createRoot(document.getElementById("root"));
+
+root.render(
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById("root")
+  </Provider>
 );
