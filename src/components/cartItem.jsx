@@ -17,6 +17,11 @@ const Cartitem = () => {
           >
             <div className="flex items-center gap-2">
               <MdOutlineClose className="text-xl text-gray-600 hover:text-red-600 cursor-pointer duration-300" />
+              <img
+                className="w-32 h-32 object-cover"
+                src={item.image}
+                alt="productImg"
+              />
             </div>
           </div>;
         })}
