@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
+import { MdOutlineClose } from "react-icons/md";
+// import { HiOutlineArrow } from "react-icons/md";
 const Cartitem = () => {
   const productData = useSelector((state) => state.luxehub.productData);
   return (
@@ -10,8 +11,13 @@ const Cartitem = () => {
       </div>
       <div>
         {productData.map((item) => {
-          <div>
-            <div></div>
+          <div
+            key={item._id}
+            className="flex items-center justify-between gap-6 mt-6"
+          >
+            <div className="flex items-center gap-2">
+              <MdOutlineClose />
+            </div>
           </div>;
         })}
       </div>
