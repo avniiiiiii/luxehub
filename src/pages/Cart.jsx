@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useState } from "react-redux";
+import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Cartitem from "../components/cartItem.jsx";
 const Cart = () => {
