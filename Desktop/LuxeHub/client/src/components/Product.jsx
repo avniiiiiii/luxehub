@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { MdOutlineStar } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { addtoCart } from "../Redux/luxehubSlice.jsx";
+import { addtoCart } from "../reduxSlice/luxehubSlice.jsx";
 
 import { ToastContainer, toast } from "react-toastify";
 

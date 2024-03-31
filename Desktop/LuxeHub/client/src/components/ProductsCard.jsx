@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { addtoCart } from "../Redux/luxehubSlice.jsx";
+import { addtoCart } from "../reduxSlice/luxehubSlice.jsx";
 import { ToastContainer, toast } from "react-toastify";
 //React component named ProductsCard that represents a card displaying product information.//
 const ProductsCard = ({ product }) => {
@@ -64,10 +64,7 @@ const ProductsCard = ({ product }) => {
                 <p className="font-semibold">${product.Price}</p>
               </div>
               <p
-                //on clicking we want to dispatch an action and that action will be addtoCart//
-                //addtoCart will take object as a parameter//
-                //humne initialise kiya tha product data array ko to be empty in our slice but jb we will click on add to cart toh array mei add hojayega and it won't be empty
-                onClick={() =>
+                onClick={() => {
                   dispatch(
                     addtoCart({
                       _id: product._id,
@@ -76,10 +73,11 @@ const ProductsCard = ({ product }) => {
                       price: product.price,
                       quantity: 1,
                       description: product.description,
-                    }) && toast.success(`${product.title} is added`)
-                    //ab ye i have to show in the cart so for that we will go to luxehubslice and we will pass the condition
-                  )
-                }
+                    })
+                  );
+                  toast.success(`${product.title} is added`);
+                  // now we have to show it in the cart, so for that, we will go to luxehubslice and pass the condition
+                }}
                 className="absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex items-center gap-1 top-0 transform -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500"
               >
                 Add to cart
