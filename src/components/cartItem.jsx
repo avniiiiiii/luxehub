@@ -3,6 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { MdOutlineClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 // import { HiOutlineArrow } from "react-icons/md";
+import {
+  decrementQuantity,
+  deleteItem,
+  incrementQuantity,
+  resetCart,
+} from "../reduxSlice/luxehubSlice.jsx";
 import { ToastContainer, toast } from "react-toastify";
 const Cartitem = () => {
   const dispatch = useDispatch();
