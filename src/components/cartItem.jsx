@@ -2,11 +2,11 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { MdOutlineClose } from "react-icons/md";
 import { Link } from "react-router-dom";
-// import { HiOutlineArrow } from "react-icons/md";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 import {
-  decrementQuantity,
   deleteItem,
-  incrementQuantity,
+  increamentQuantity,
+  decrementQuantity,
   resetCart,
 } from "../reduxSlice/luxehubSlice.jsx";
 import { ToastContainer, toast } from "react-toastify";
@@ -45,36 +45,36 @@ const Cartitem = () => {
               <p className="text-sm">Quantity</p>
               <div className="flex items-center gap-4 text-sm font-semibold">
                 <span
-                  // onClick={() =>
-                  //   dispatch(
-                  //     decrementQuantity({
-                  //       _id: item._id,
-                  //       title: item.title,
-                  //       image: item.image,
-                  //       price: item.price,
-                  //       quantity: 1,
-                  //       description: item.description,
-                  //     })
-                  //   )
-                  // }
+                  onClick={() =>
+                    dispatch(
+                      decrementQuantity({
+                        _id: item._id,
+                        title: item.title,
+                        image: item.image,
+                        price: item.price,
+                        quantity: 1,
+                        description: item.description,
+                      })
+                    )
+                  }
                   className="border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white cursor-pointer duration-300 active:bg-black"
                 >
                   -
                 </span>
-                1
+                {item.quantity}
                 <span
-                  // onClick={() =>
-                  //   dispatch(
-                  //     increamentQuantity({
-                  //       _id: item._id,
-                  //       title: item.title,
-                  //       image: item.image,
-                  //       price: item.price,
-                  //       quantity: 1,
-                  //       description: item.description,
-                  //     })
-                  //   )
-                  // }
+                  onClick={() =>
+                    dispatch(
+                      increamentQuantity({
+                        _id: item._id,
+                        title: item.title,
+                        image: item.image,
+                        price: item.price,
+                        quantity: 1,
+                        description: item.description,
+                      })
+                    )
+                  }
                   className="border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white cursor-pointer duration-300 active:bg-black"
                 >
                   +
@@ -93,6 +93,14 @@ const Cartitem = () => {
       >
         Reset Cart
       </button>
+      <Link to="/">
+        <button className="mt-8 ml-7 flex items-center gap-1 text-gray-400 hover:text-black duration-300">
+          <span>
+            <HiOutlineArrowLeft />
+          </span>
+          go shopping
+        </button>
+      </Link>
       <ToastContainer
         position="top-left"
         autoClose={2000}
