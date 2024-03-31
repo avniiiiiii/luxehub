@@ -1,8 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { MdOutlineClose } from "react-icons/md";
 // import { HiOutlineArrow } from "react-icons/md";
 const Cartitem = () => {
+  const dispatch = useDispatch();
   const productData = useSelector((state) => state.luxehub.productData);
   return (
     <div className="w-2/3 pr-10">
@@ -16,7 +17,13 @@ const Cartitem = () => {
             className="flex items-center justify-between gap-6 mt-6"
           >
             <div className="flex items-center gap-2">
-              <MdOutlineClose className="text-xl text-gray-600  hover:text-pink-700 cursor-pointer duration-300" />
+              <MdOutlineClose
+                onClick={() =>
+                  dispatch(deleteItem(item._id)) &
+                  toast.error(`${item.title} is removed`)
+                }
+                className="text-xl text-gray-600  hover:text-pink-700 cursor-pointer duration-300"
+              />
 
               <img
                 className="w-32 h-32 object-cover"
