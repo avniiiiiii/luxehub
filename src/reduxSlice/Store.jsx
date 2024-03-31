@@ -12,8 +12,19 @@ import {
 import storage from "redux-persist/lib/storage";
 import luxehubReducer from "./luxehubSlice.jsx";
 
+const persistConfig = {
+  key: "root",
+  version: 1,
+  storage,
+};
+const persistedReducer = persistReducer(persistConfig, luxehubReducer);
+
 export const store = configureStore({
-  reducer: {
-    luxehub: luxehubReducer,
-  },
+  reducer: { luxehub: persistedReducer },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
