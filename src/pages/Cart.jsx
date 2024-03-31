@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
 import Cartitem from "../components/cartItem.jsx";
 const Cart = () => {
   const productData = useSelector((state) => state.luxehub.productData);

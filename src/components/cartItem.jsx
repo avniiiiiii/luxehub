@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { MdOutlineClose } from "react-icons/md";
 // import { HiOutlineArrow } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
 const Cartitem = () => {
   const dispatch = useDispatch();
   const productData = useSelector((state) => state.luxehub.productData);
@@ -77,6 +78,18 @@ const Cartitem = () => {
           </div>
         ))}
       </div>
+      <ToastContainer
+        position="top-left"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };
