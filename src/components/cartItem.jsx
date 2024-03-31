@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { MdOutlineClose } from "react-icons/md";
+import { Link } from "react-router-dom";
 // import { HiOutlineArrow } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
 const Cartitem = () => {
@@ -78,6 +79,14 @@ const Cartitem = () => {
           </div>
         ))}
       </div>
+      <button
+        onClick={() =>
+          dispatch(resetCart()) & toast.error("Your Cart is Empty!")
+        }
+        className="bg-red-500 text-white mt-8 ml-7 py-1 px-6 hover:bg-red-800 duration-300"
+      >
+        Reset Cart
+      </button>
       <ToastContainer
         position="top-left"
         autoClose={2000}
