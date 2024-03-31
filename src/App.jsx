@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { PersistGate } from "redux-persist/integration/react";
 import { productsData } from "./api/Api.jsx";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
