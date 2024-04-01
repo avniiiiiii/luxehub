@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import { productsData } from "./api/Api.jsx";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
@@ -16,6 +17,7 @@ const Layout = () => {
         <Route path="/" element={<Home />} loader={productsData} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
       <Footer />
     </div>
