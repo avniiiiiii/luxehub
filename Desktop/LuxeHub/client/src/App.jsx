@@ -17,7 +17,7 @@ const Layout = () => {
         <Route path="/" element={<Home />} loader={productsData} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </div>
