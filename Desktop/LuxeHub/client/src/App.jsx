@@ -7,6 +7,7 @@ import Header from "./components/Header.jsx";
 import Product from "./components/Product.jsx";
 import Home from "./Home.jsx";
 import Cart from "./pages/Cart.jsx";
+import Login from "./pages/Login.jsx";
 
 const Layout = () => {
   return (

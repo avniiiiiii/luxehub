@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import "react-toastify/dist/ReactToastify.css";
-import { store, persistor } from "./redux/store";
 import { app } from "./fireabase.config";
+import { store, persistor } from "./redux/store";
+
 import "./index.css";
 import App from "./App";
 
@@ -16,3 +17,4 @@ root.render(
     </PersistGate>
   </Provider>
 );
+//persistor use kiya hai so that refresh krne pr sab intact rhe //
