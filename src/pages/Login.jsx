@@ -1,5 +1,6 @@
 import React from "react";
 import clientGoogle from "../assets/clientGoogle.jpg";
+import clientgithub from "../assets/clientgithub.jpg";
 
 const Login = () => {
   return (
