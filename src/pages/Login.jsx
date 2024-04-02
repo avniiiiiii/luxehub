@@ -1,9 +1,21 @@
 import React from "react";
 import clientGoogle from "../assets/clientGoogle.jpg";
 import clientgithub from "../assets/clientgithub.jpg";
+import {
+  GoogleAuthProvider,
+  getAuth,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 
 const Login = () => {
-  const handleGoogleLogin = () => {};
+  const auth = getAuth();
+  // ============== Google Login Start here =====================
+  const handleGoogleLogin = (e) => {
+    e.preventDefault();
+    console.log(auth);
+  };
+  // ============== Google Login End here =======================
   return (
     <div className="w-full flex flex-col items-center justify-center gap-10 py-20">
       <div className="w-full flex items-center justify-center gap-10">
