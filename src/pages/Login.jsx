@@ -2,10 +2,10 @@ import React from "react";
 import clientGoogle from "../assets/clientGoogle.jpg";
 import clientgithub from "../assets/clientgithub.jpg";
 import {
-  GoogleAuthProvider,
+  // GoogleAuthProvider,
   getAuth,
-  signInWithPopup,
-  signOut,
+  // signInWithPopup,
+  // signOut,
 } from "firebase/auth";
 
 const Login = () => {
