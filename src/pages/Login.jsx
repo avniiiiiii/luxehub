@@ -1,22 +1,31 @@
 import React from "react";
-import { getAuth, signInWithPopup } from "firebase/auth";
-import { app } from "../path/to/your/firebaseConfig"; // Adjust the path accordingly
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { app } from "../Firebase.config.jsx";
 import clientGoogle from "../assets/clientGoogle.jpg";
 import clientgithub from "../assets/clientgithub.jpg";
 
 const Login = () => {
   const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
   // ============== Google Login Start here =====================
-  const handleGoogleLogin = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    console.log(auth);
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   // ============== Google Login End here =======================
   return (
     <div className="w-full flex flex-col items-center justify-center gap-10 py-20">
       <div className="w-full flex items-center justify-center gap-10">
         <div
-          onClick={handleGoogleLogin}
+          onClick={handleLogin}
           className="text-base w-60 h-12 tracking-wide border-[1px] border-gray-400 rounded-md flex items-center justify-center gap-2 hover:border-pink-700 cursor-pointer duration-300"
         >
           <img className="w-8" src={clientGoogle} alt="logogoogle" />
