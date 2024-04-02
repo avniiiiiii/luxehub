@@ -1,15 +1,11 @@
 import React from "react";
+import { getAuth, signInWithPopup } from "firebase/auth";
+import { app } from "../path/to/your/firebaseConfig"; // Adjust the path accordingly
 import clientGoogle from "../assets/clientGoogle.jpg";
 import clientgithub from "../assets/clientgithub.jpg";
-import {
-  // GoogleAuthProvider,
-  getAuth,
-  // signInWithPopup,
-  // signOut,
-} from "firebase/auth";
 
 const Login = () => {
-  const auth = getAuth();
+  const auth = getAuth(app);
   // ============== Google Login Start here =====================
   const handleGoogleLogin = (e) => {
     e.preventDefault();
