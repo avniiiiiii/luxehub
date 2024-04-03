@@ -50,7 +50,7 @@ const Login = () => {
       .then(() => {
         // Sign-out successful.
         toast.success("Log Out Successfully!");
-        // dispatch(removeUser());
+        dispatch(removeUser());
       })
       .catch((error) => {
         console.log(error);
