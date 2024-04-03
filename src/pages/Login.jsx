@@ -6,7 +6,7 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 import { app } from "../Firebase.config.jsx";
-
+import { ToastContainer, toast } from "react-toastify";
 import clientGoogle from "../assets/clientGoogle.jpg";
 import clientgithub from "../assets/clientgithub.jpg";
 
