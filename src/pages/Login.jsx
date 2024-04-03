@@ -84,3 +84,4 @@ const Login = () => {
 };
 
 export default Login;
+//whenever a user logs in we need to pass the info in redux as userinfo//
