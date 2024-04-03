@@ -23,6 +23,19 @@ const Login = () => {
   };
 
   // ============== Google Login End here =======================
+  // ============== Logout Start here ===========================
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        toast.success("Log Out Successfully!");
+        dispatch(removeUser());
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  // ============== Logout End here =============================
   return (
     <div className="w-full flex flex-col items-center justify-center gap-10 py-20">
       <div className="w-full flex items-center justify-center gap-10">
