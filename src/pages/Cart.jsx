@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import StripeCheckout from "react-stripe-checkout";
 import Cartitem from "../components/cartItem.jsx";
 const Cart = () => {
   const productData = useSelector((state) => state.luxehub.productData);
