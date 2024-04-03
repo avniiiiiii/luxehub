@@ -8,11 +8,15 @@ import {
 import { app } from "../Firebase.config.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser, removeUser } from "../redux/bazarSlice";
+import { addUser, removeUser } from "../reduxSlice/luxehubSlice.jsx";
+import { useNavigate } from "react-router-dom";
 import clientGoogle from "../assets/clientGoogle.jpg";
 import clientgithub from "../assets/clientgithub.jpg";
 
 const Login = () => {
+  const userInfo = useSelector((state) => state.luxehub.userInfo);
+  const navigate = useNavigate("");
+  const dispatch = useDispatch();
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
   // ============== Google Login Start here =====================
