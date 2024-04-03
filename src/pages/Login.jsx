@@ -1,5 +1,10 @@
 import React from "react";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  signOut,
+  GoogleAuthProvider,
+} from "firebase/auth";
 import { app } from "../Firebase.config.jsx";
 
 import clientGoogle from "../assets/clientGoogle.jpg";
@@ -62,6 +67,18 @@ const Login = () => {
           Sign out
         </button>
       </div>
+      <ToastContainer
+        position="top-left"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };
