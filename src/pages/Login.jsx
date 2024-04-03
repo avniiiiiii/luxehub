@@ -1,6 +1,7 @@
 import React from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../Firebase.config.jsx";
+
 import clientGoogle from "../assets/clientGoogle.jpg";
 import clientgithub from "../assets/clientgithub.jpg";
 
@@ -8,6 +9,7 @@ const Login = () => {
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
   // ============== Google Login Start here =====================
+
   const handleLogin = (e) => {
     e.preventDefault();
     signInWithPopup(auth, provider)
