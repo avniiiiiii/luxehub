@@ -7,6 +7,8 @@ import {
 } from "firebase/auth";
 import { app } from "../Firebase.config.jsx";
 import { ToastContainer, toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser, removeUser } from "../redux/bazarSlice";
 import clientGoogle from "../assets/clientGoogle.jpg";
 import clientgithub from "../assets/clientgithub.jpg";
 
