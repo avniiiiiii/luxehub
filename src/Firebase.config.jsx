@@ -6,12 +6,12 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCyEsvI0D66wyFBVB6CAYPp_glA3OSzqk8",
-  authDomain: "bazar-d3cb2.firebaseapp.com",
-  projectId: " luxehub-app",
-  storageBucket: "bazar-d3cb2.appspot.com",
-  messagingSenderId: "290833778260",
-  appId: "1:290833778260:web:56aa636d4d6a3a38e48fc1",
+  authDomain: "luxehub-app.firebaseapp.com",
+  projectId: "luxehub-app",
+  storageBucket: "luxehub-app.appspot.com",
+  messagingSenderId: "532988244930",
+  appId: "1:532988244930:web:8b979cf93918b320255c5b",
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
