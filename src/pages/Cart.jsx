@@ -67,8 +67,8 @@ const Cart = () => {
             {payNow && (
               <div className="w-full mt-6 flex items-center justify-center">
                 <StripeCheckout
-                  stripeKey="pk_test_51LXpmzBcfNkwYgIPXd3qq3e2m5JY0pvhaNZG7KSCklYpVyTCVGQATRH8tTWxDSYOnRTT5gxOjRVpUZmOWUEHnTxD00uxobBHkc"
-                  name="Bazar Online Shopping"
+                  stripeKey="pk_test_51P1S9iSJRr3RghEXUHtjlDeV0HGUjW3agpRwSClftuZhXasmX9gc2M5sS6UYN3ewCrKpFlnC64UcF5Vt5yV7MtcZ004takQJwV"
+                  name="Luxehub Online Shopping"
                   amount={totalAmt * 100}
                   label="Pay to bazar"
                   description={`Your Payment amount is $${totalAmt}`}
