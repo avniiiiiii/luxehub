@@ -6,6 +6,7 @@ import Cartitem from "../components/cartItem.jsx";
 const Cart = () => {
   const productData = useSelector((state) => state.luxehub.productData);
   const userInfo = useSelector((state) => state.luxehub.userInfo);
+  const [payNow, setPayNow] = useState(false);
   const [totalAmt, setTotalAmt] = useState("");
 
   //useeffect to constantly change the amt//
@@ -18,6 +19,13 @@ const Cart = () => {
     setTotalAmt(price.toFixed(2));
   }, [productData]);
 
+  const handleCheckout = () => {
+    if (userInfo) {
+      setPayNow(true);
+    } else {
+      toast.error("Please sign in to Checkout");
+    }
+  };
   return (
     <>
       <div>
