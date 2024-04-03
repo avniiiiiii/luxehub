@@ -34,6 +34,9 @@ const Login = () => {
             image: user.photoURL,
           })
         );
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
       })
       .catch((error) => {
         console.log(error);
